@@ -330,7 +330,7 @@ clean = re.sub(r'<[^>]+>', '', text)
 clean = re.sub(r'\d+', '', clean)
  
 # Видаляємо все, крім літер і пробілів
-clean = re.sub(r'[^a-zA-Z\s]', '', clean)
+clean = re.sub(r'[^A-Za-zА-Яа-яІіЇїЄєҐґ\s]', '', clean)
  
 print("--- Крок 1: Після очищення ---\n")
 print(clean)
@@ -456,7 +456,8 @@ B_2x8 = B.reshape(2, 8)
 print(f"Форма (2, 8):\n{B_2x8}\n")
  
 B_16x1 = B.reshape(16, 1)
-print(f"Форма (16, 1):\n{B_16x1.T}  <- виведено як рядок для зручності\n")
+print(f"Форма (16, 1):\n{B_16x1}\n")
+print(f"Розмірність: {B_16x1.shape}")
  
 B_16 = B.reshape(16,)
 print(f"Форма (16,):\n{B_16}")
