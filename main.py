@@ -330,7 +330,7 @@ clean = re.sub(r'<[^>]+>', '', text)
 clean = re.sub(r'\d+', '', clean)
  
 # Видаляємо все, крім літер і пробілів
-clean = re.sub(r'[^a-zA-Za-zA-Z\s]', '', clean)
+clean = re.sub(r'[^a-zA-Z\s]', '', clean)
  
 print("--- Крок 1: Після очищення ---\n")
 print(clean)
